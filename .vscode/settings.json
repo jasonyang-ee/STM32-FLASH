@@ -1,0 +1,13 @@
+{
+	"files.associations": {
+		"*.cpp": "cpp",
+		"stm32l4xx_hal.h": "c",
+		"lwshell.h": "c",
+		"lwshell_opts.h": "c",
+		"array": "cpp",
+		"string_view": "cpp",
+		"initializer_list": "cpp",
+		"string": "cpp",
+		"algorithm": "cpp"
+	}
+}
