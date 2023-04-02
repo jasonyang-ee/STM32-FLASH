@@ -1,6 +1,6 @@
 [![Build Binary](https://github.com/jasonyang-ee/STM32-FLASH/actions/workflows/build-all.yml/badge.svg)](https://github.com/jasonyang-ee/STM32-FLASH/actions/workflows/build-all.yml)
 
-# STM32G431 Playground
+# STM32 Flash Memory Access
 
 ## Hardware Basics
 
