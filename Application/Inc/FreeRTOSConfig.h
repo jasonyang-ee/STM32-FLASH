@@ -28,8 +28,8 @@
  */
 /* USER CODE END Header */
 
-#ifndef CORE_INC_FREERTOSCONFIG
-#define CORE_INC_FREERTOSCONFIG
+#ifndef APPLICATION_INC_FREERTOSCONFIG
+#define APPLICATION_INC_FREERTOSCONFIG
 
 /*-----------------------------------------------------------
  * Application specific definitions.
@@ -156,4 +156,4 @@ Add Those to MX_TIM7_Init()
 
 
 
-#endif    /* CORE_INC_FREERTOSCONFIG */
+#endif    /* APPLICATION_INC_FREERTOSCONFIG */

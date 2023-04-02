@@ -2,7 +2,7 @@
 
 #include "Thread.hpp"
 
-#include "instances.h"
+#include "Instances.hpp"
 
 Thread::Thread() {
     // Template for creating task
@@ -17,6 +17,9 @@ Thread::Thread() {
 
     auto t3 = [](void *arg) { static_cast<Thread *>(arg)->app_2(); };
     xTaskCreate(t3, "app 2", 128, this, 0, &app_2_Handle);
+
+    auto t6 = [](void *arg) { static_cast<Thread *>(arg)->app_3(); };
+    xTaskCreate(t6, "app 3", 128, this, 0, &app_3_Handle);
 
     auto t4 = [](void *arg) { static_cast<Thread *>(arg)->schedule_20Hz(); };
     xTaskCreate(t4, "schedule 20Hz", 128, this, -2, &schedule_20Hz_Handle);
@@ -36,17 +39,25 @@ void Thread::parse() {
 
 void Thread::app_1() {
     while (1) {
-        serialCOM.sendString("Tick: ");
-        serialCOM.sendNumber(HAL_GetTick());
-        serialCOM.sendLn();
-        vTaskDelay(5000);
+		vTaskSuspend(NULL);
+		flash.Save();
     }
 }
 
 void Thread::app_2() {
     while (1) {
-        serialCOM.sendString("Here: ");
-        vTaskDelay(500);
+		vTaskSuspend(NULL);
+		flash.Load();
+    }
+}
+
+void Thread::app_3() {
+    while (1) {
+		vTaskSuspend(NULL);
+		serialCOM.sendNumber(led_user.getLevel());
+		serialCOM.sendLn();
+		serialCOM.sendNumber(led_user.getScale());
+		serialCOM.sendLn();
     }
 }
 

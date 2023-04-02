@@ -3,7 +3,7 @@
 // Driver
 #include "cmsis_os.h"
 #include "gpio.h"
-#include "instances.h"
+#include "Instances.hpp"
 #include "tim.h"
 #include "usart.h"
 
@@ -19,6 +19,7 @@ CLI cli{};
 Thread thread{};
 LED led_user{1000, 1};
 SerialCOM serialCOM{};
+Flash flash{};
 
 int main(void) {
     HAL_Init();

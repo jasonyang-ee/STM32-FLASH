@@ -18,8 +18,8 @@
   */
 /* USER CODE END Header */
 /* Define to prevent recursive inclusion -------------------------------------*/
-#ifndef __GPIO_H__
-#define __GPIO_H__
+#ifndef CORE_INC_GPIO
+#define CORE_INC_GPIO
 
 #ifdef __cplusplus
 extern "C" {
@@ -44,6 +44,6 @@ void MX_GPIO_Init(void);
 
 #ifdef __cplusplus
 }
-#endif
+#endif    /* CORE_INC_GPIO */
 #endif /*__ GPIO_H__ */
 
