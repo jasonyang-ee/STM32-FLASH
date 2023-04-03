@@ -131,3 +131,7 @@ void Flash::Load() {
     led_user.setScale(loaded_config.config.led_scale);
 }
 ```
+
+The memory save example:
+
+![FlashMem](doc/img/FlashMem.png)
