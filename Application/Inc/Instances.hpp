@@ -5,7 +5,7 @@
 #include "SerialCOM.hpp"
 #include "CLI.hpp"
 #include "Thread.hpp"
-#include "Flash.hpp"
+#include "Flash_STM32L432KC.hpp"
 
 #define UART_BUFFER 64
 

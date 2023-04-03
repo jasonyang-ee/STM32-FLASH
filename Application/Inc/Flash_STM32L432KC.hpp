@@ -1,5 +1,5 @@
-#ifndef CORE_INC_FLASH
-#define CORE_INC_FLASH
+#ifndef APPLICATION_INC_FLASH_STM32L432KC
+#define APPLICATION_INC_FLASH_STM32L432KC
 
 #include "algorithm"
 #include "array"
@@ -40,4 +40,4 @@ class Flash {
     void Read(Flash::Config_Arr*, uint8_t);
 };
 
-#endif /* CORE_INC_FLASH */
+#endif    /* APPLICATION_INC_FLASH_STM32L432KC */
